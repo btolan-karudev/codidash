@@ -16,5 +16,8 @@
 <body>
 
 <header>
-    codidas
+    CodiDash
 </header>
+
+<!-- start:wrapper -->
+<div class="wrapper">
