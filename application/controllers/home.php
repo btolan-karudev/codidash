@@ -26,12 +26,12 @@ class Home extends CI_Controller
         $this->load->view('home/inc/footer_view');
     }
 
-    public function test()
-    {
-        $this->db   ->select('user_id, login')
-                    ->order_by('user_id DESC');
-        $q = $this->db->get('user');
-        print_r($q->result());
+//    public function test()
+//    {
+//        $this->db   ->select('user_id, login')
+//                    ->order_by('user_id DESC');
+//        $q = $this->db->get('user');
+//        print_r($q->result());
 
 //        $data = [
 //            'login' => 'Jenkins',
@@ -48,7 +48,7 @@ class Home extends CI_Controller
 
 //        $this->db->delete('user', ['user_id' => 1]);
 
-    }
+//    }
 
 }
 
