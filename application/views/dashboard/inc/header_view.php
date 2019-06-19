@@ -15,14 +15,15 @@
     <script src="<?= base_url() ?>public/js/bootstrap.js"></script>
 <body>
 
-<header>
-    CodiDash
-</header>
-
-<nav>
-    <a href="#">Dashboard</a>
-    <a href="#">User</a>
-    <a href="<?= base_url('dashboard/logout') ?>">Logout</a>
+<nav class="navbar">
+    <div class="navbar-inner">
+        <span class="brand">CodiDash</span>
+        <ul class="nav">
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#">User</a></li>
+            <li><a href="<?= base_url('dashboard/logout') ?>">Logout</a></li>
+        </ul>
+    </div>
 </nav>
 
 <!-- start:wrapper -->
