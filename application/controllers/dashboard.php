@@ -3,6 +3,12 @@
 
 class Dashboard extends CI_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $user_id = $this->session->userdata('user_id');
+        if (!$user_id) $this->logout();
+    }
 
     /**
      * Index Page for this controller.
@@ -28,7 +34,7 @@ class Dashboard extends CI_Controller
 
     public function logout()
     {
-        session_destroy();
+        $this->session->sess_destroy();
         redirect('');
     }
 

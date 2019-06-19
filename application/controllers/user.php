@@ -9,6 +9,16 @@ class User extends CI_Controller
         $this->load->model('user_model');
     }
 
+    public function login()
+    {
+        $this->session->set_userdata(['user_id' => 1]);
+
+        $session = $this->session->all_userdata();
+        print_r($session);
+
+        $this->output->enable_profiler();
+    }
+
     public function test_get()
     {
         $data = $this->user_model->get(9);
