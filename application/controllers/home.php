@@ -28,9 +28,26 @@ class Home extends CI_Controller
 
     public function test()
     {
-        $this->db->where(['user_id' => 2]);
+        $this->db   ->select('user_id, login')
+                    ->order_by('user_id DESC');
         $q = $this->db->get('user');
         print_r($q->result());
+
+//        $data = [
+//            'login' => 'Jenkins',
+//        ];
+//        $this->db->insert('user', $data);
+
+
+//        $data = [
+//            'login' => 'Sammsoon',
+//        ];
+//        $this->db->where(['user_id' => 4]);
+//        $this->db->update('user', $data);
+
+
+//        $this->db->delete('user', ['user_id' => 1]);
+
     }
 
 }
