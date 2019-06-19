@@ -9,14 +9,16 @@ class User extends CI_Controller
         $this->load->model('user_model');
     }
 
-    public function get()
+    public function test_get()
     {
-        $data = $this->user_model->get(4);
+        $data = $this->user_model->get(9);
 
         print_r($data);
+
+        $this->output->enable_profiler(true);
     }
 
-    public function insert()
+    public function test_insert()
     {
         $data = [
             'login' => 'Jettro'
@@ -27,7 +29,7 @@ class User extends CI_Controller
         print_r($result);
     }
 
-    public function update()
+    public function test_update()
     {
         $data = [
             'login' => 'Peggy'
@@ -38,7 +40,7 @@ class User extends CI_Controller
         print_r($result);
     }
 
-    public function delete($user_id)
+    public function test_delete($user_id)
     {
         $result = $this->user_model->delete($user_id);
 
