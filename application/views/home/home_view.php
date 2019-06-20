@@ -2,7 +2,7 @@
 
     <div class="span6">
 
-        <form action="?" class="form-horizontal" method="post">
+        <form id="login_form" action="<?= site_url('user/login') ?>" class="form-horizontal" method="post">
 
             <div class="control-group">
                 <label for="" class="control-label">Login</label>
@@ -29,3 +29,21 @@
     </div>
 
 </div>
+
+<script type="text/javascript">
+    $(function () {
+        $("#login_form").submit(function (evt) {
+            evt.preventDefault();
+            var url = $(this).attr('action');
+            var postData = $(this).serialize();
+
+            $.post(url, postData, function (o) {
+                if (o.result === 1) {
+                    window.location.href = '<?=site_url('dashboard')?>';
+                } else {
+                    alert('Invalid login');
+                }
+            }, 'json');
+        });
+    });
+</script>
