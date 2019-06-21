@@ -26,6 +26,14 @@ class Home extends CI_Controller
         $this->load->view('home/inc/footer_view');
     }
 
+    public function code() {
+//        $this->load->library('encrypt');
+        $str = 'hello123';
+
+        $passEncrypt = password_hash( $str, PASSWORD_DEFAULT);
+        echo $passEncrypt;
+    }
+
 //    public function test()
 //    {
 //        $this->db   ->select('user_id, login')
