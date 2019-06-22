@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a8c69520-4e5b-45e1-8065-c1c685dfe9aa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/system/language/french/calendar_lang.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system/language/french/date_lang.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system/language/french/db_lang.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system/language/french/email_lang.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system/language/french/form_validation_lang.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system/language/french/ftp_lang.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system/language/french/imglib_lang.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system/language/french/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system/language/french/migration_lang.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system/language/french/number_lang.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system/language/french/profiler_lang.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system/language/french/unit_test_lang.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/system/language/french/upload_lang.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/config/config.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/config.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/config/constants.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/config/constants.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/controllers/home.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/controllers/home.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +16,17 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+            <state relative-caret-position="264">
+              <caret line="28" selection-start-line="28" selection-start-column="2" selection-end-line="31" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/config/constants.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -85,6 +80,7 @@
         <option value="$PROJECT_DIR$/application/controllers/user.php" />
         <option value="$PROJECT_DIR$/application/views/home/home_view.php" />
         <option value="$PROJECT_DIR$/application/config/config.php" />
+        <option value="$PROJECT_DIR$/application/config/constants.php" />
         <option value="$PROJECT_DIR$/application/controllers/home.php" />
       </list>
     </option>
@@ -115,6 +111,12 @@
               <item name="codidash" type="b2602c69:ProjectViewProjectNode" />
               <item name="codidash" type="462c0819:PsiDirectoryNode" />
               <item name="application" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="codidash" type="b2602c69:ProjectViewProjectNode" />
+              <item name="codidash" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="codidash" type="b2602c69:ProjectViewProjectNode" />
@@ -213,13 +215,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="35138000" />
+    <option name="totallyTimeSpent" value="35579000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="103" y="5" width="1821" height="1046" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1266326" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1266326" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -234,7 +236,7 @@
       <window_info anchor="bottom" id="SonarLint" order="9" />
       <window_info anchor="bottom" id="Database Changes" order="10" />
       <window_info anchor="bottom" id="RNConsole" order="11" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="12" visible="true" weight="0.2247191" />
+      <window_info anchor="bottom" id="Terminal" order="12" visible="true" weight="0.2247191" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -441,10 +443,17 @@
     <entry file="file://$PROJECT_DIR$/application/helpers/index.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/config/constants.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/controllers/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+        <state relative-caret-position="264">
+          <caret line="28" selection-start-line="28" selection-start-column="2" selection-end-line="31" selection-end-column="7" />
         </state>
       </provider>
     </entry>
