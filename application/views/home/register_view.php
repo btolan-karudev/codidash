@@ -2,7 +2,7 @@
 
     <div class="span6">
 
-        <form id="login_form" action="<?= site_url('user/login') ?>" class="form-horizontal" method="post">
+        <form id="register_form" action="<?= site_url('user/register') ?>" class="form-horizontal" method="post">
 
             <div class="control-group">
                 <label for="" class="control-label">Login</label>
@@ -10,23 +10,34 @@
                     <input type="text" name="login" class="input-xlarge">
                 </div>
             </div>
-
+<div class="control-group">
+                <label for="" class="control-label">Email</label>
+                <div class="controls">
+                    <input type="text" name="email" class="input-xlarge">
+                </div>
+            </div>
             <div class="control-group">
                 <label for="" class="control-label">Password</label>
                 <div class="controls">
                     <input type="password" name="password" class="input-xlarge">
                 </div>
             </div>
+            <div class="control-group">
+                <label for="" class="control-label">Confirm Password</label>
+                <div class="controls">
+                    <input type="password" name="confirm_password" class="input-xlarge">
+                </div>
+            </div>
 
             <div class="control-group">
                 <div class="controls">
-                    <input type="submit" value="Login" class="btn btn-primary">
+                    <input type="submit" value="Register" class="btn btn-primary">
                 </div>
             </div>
 
         </form>
 
-        <a href="<?= site_url('home/register') ?>">Register</a>
+        <a href="<?= site_url('/') ?>">Back</a>
 
     </div>
 
@@ -34,7 +45,7 @@
 
 <script type="text/javascript">
     $(function () {
-        $("#login_form").submit(function (evt) {
+        $("#register_form").submit(function (evt) {
             evt.preventDefault();
             var url = $(this).attr('action');
             var postData = $(this).serialize();
