@@ -27,11 +27,20 @@ class Home extends CI_Controller
     }
 
     public function code() {
-//        $this->load->library('encrypt');
+//       $passEncrypt = $this->load->library('encrypt');
         $str = 'hello123';
 
         $passEncrypt = password_hash( $str, PASSWORD_DEFAULT);
-        echo $passEncrypt;
+        echo $passEncrypt."<br>";
+
+
+        $hash = '$2y$10$uTIwdGaaovVNUsdBqHlZ8.tIHiWCRPHTd4TbV307XqIcUAG8Oq742';
+
+        if (password_verify('hello123', $hash)) {
+            echo 'Password is valid!';
+        } else {
+            echo 'Invalid password.';
+        }
     }
 
 //    public function test()
