@@ -63,7 +63,7 @@
                     var output = '<ul>';
                     for (var key in o.error) {
                         var value = o.error[key];
-                        output += '<li>+value+'</li>'
+                        output += '<li>'+value+'</li>';
                     }
                     output += '</ul>';
                     $('#register_form_error').html(output);

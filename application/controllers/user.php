@@ -58,17 +58,15 @@ class User extends CI_Controller
             'password' => hash('sha256', $password . SALT)
         ]);
 
-        echo $user_id;
-        die('not yet ready');
-
         $this->output->set_content_type('application_json');
 
-        if ($result) {
-            $this->session->set_userdata(['user_id' => $result[0]['user_id']]);
+        if ($user_id) {
+            $this->session->set_userdata(['user_id' => $user_id]);
             $this->output->set_output(json_encode(['result' => 1]));
             return false;
         }
 
+        $this->output->set_output(json_encode(['result' => 0, 'error' => 'User not created.']));
 
     }
 
