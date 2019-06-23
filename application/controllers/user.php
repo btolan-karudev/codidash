@@ -42,7 +42,7 @@ class User extends CI_Controller
         if ($this->form_validation->run() == false) {
             $this->output->set_output(json_encode([
                 'result' => 0,
-                'data' => validation_errors()
+                'error' => $this->form_validation->error_array()
             ]));
             return false;
         }
