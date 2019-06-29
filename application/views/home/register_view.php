@@ -4,7 +4,7 @@
 
         <div id="register_form_error" class="alert alert-error"><!--Dynamic--></div>
 
-        <form id="register_form" action="<?= site_url('user/register') ?>" class="form-horizontal" method="post">
+        <form id="register_form" action="<?= site_url('api/register') ?>" class="form-horizontal" method="post">
 
             <div class="control-group">
                 <label for="" class="control-label">Login</label>

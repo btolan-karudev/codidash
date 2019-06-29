@@ -1,7 +1,7 @@
 <?php
 
 
-class User extends CI_Controller
+class Test extends CI_Controller
 {
     public function __construct()
     {

@@ -2,7 +2,7 @@
 
     <div class="span6">
 
-        <form id="login_form" action="<?= site_url('user/login') ?>" class="form-horizontal" method="post">
+        <form id="login_form" action="<?= site_url('api/login') ?>" class="form-horizontal" method="post">
 
             <div class="control-group">
                 <label for="" class="control-label">Login</label>
