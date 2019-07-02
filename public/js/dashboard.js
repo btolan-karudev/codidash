@@ -6,7 +6,7 @@ var Dashboard = function () {
         console.log('Dashboard Created');
         Template = new Template();
         Evento = new Evento();
-        Result = new Result();
+        // Result = new Result();
         load_todo();
         load_note();
     };
@@ -19,7 +19,7 @@ var Dashboard = function () {
             for (var i = 0; i < o.length; i++) {
                 output += Template.todo(o[i]);
             }
-            $(#list_todo).html(output);
+            $('#list_todo').html(output);
         }, 'json');
     };
 
@@ -31,7 +31,7 @@ var Dashboard = function () {
             for (var i = 0; i < o.length; i++) {
                 output += Template.note(o[i]);
             }
-            $(#list_node).html(output);
+            $('#list_note').html(output);
         }, 'json');
     };
 

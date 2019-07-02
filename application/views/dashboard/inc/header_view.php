@@ -13,16 +13,14 @@
 
     <script src="<?= base_url() ?>public/js/jquery.js"></script>
     <script src="<?= base_url() ?>public/js/bootstrap.js"></script>
-    <script src="<?= base_url() ?>public/js/dashboard/result.js"></script>
-    <script src="<?= base_url() ?>public/js/dashboard/event.js"></script>
+
     <script src="<?= base_url() ?>public/js/dashboard/template.js"></script>
+    <script src="<?= base_url() ?>public/js/dashboard/event.js"></script>
+    <script src="<?= base_url() ?>public/js/dashboard/result.js"></script>
+
     <script src="<?= base_url() ?>public/js/dashboard.js"></script>
-    <script>
-        $(function() {
-// Init the Dashboard application
-            var dashboard = new Dashboard();
-        });
-    </script>
+
+
 <body>
 
 <nav class="navbar">

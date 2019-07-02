@@ -1,4 +1,9 @@
-
+<script>
+    $(function() {
+// Init the Dashboard application
+        var dashboard = new Dashboard();
+    });
+</script>
 <div class="row">
 
     <div id="dashboard-side" class="span4">
