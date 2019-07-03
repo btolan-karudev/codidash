@@ -14,7 +14,7 @@ var Dashboard = function () {
     // ------------------------------------------------------------------------
 
     var load_todo = function () {
-        $.get('api/get_todo', function (o) {
+        $.get('api/create_todo', function (o) {
             var output = '';
             for (var i = 0; i < o.length; i++) {
                 output += Template.todo(o[i]);
@@ -26,7 +26,7 @@ var Dashboard = function () {
     // ------------------------------------------------------------------------
 
     var load_note = function () {
-        $.get('api/get_note', function (o) {
+        $.get('api/create_note', function (o) {
             var output = '';
             for (var i = 0; i < o.length; i++) {
                 output += Template.note(o[i]);

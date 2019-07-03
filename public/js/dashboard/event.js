@@ -28,9 +28,9 @@ var Evento = function () {
 
             $.post(url, postData, function (o) {
                 if (o.result == 1) {
-                    Result.success();
+                    Result.success('test succes');
                 } else {
-                    Result.error();
+                    Result.error(o.error);
                 }
             }, 'json');
 

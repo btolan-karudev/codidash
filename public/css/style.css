@@ -12,3 +12,8 @@
     background: #f2f2f2;
     min-height: 500px;
 }
+
+/** Generic Staff */
+.hide {
+    display: none;
+}
