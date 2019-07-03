@@ -14,13 +14,15 @@ var Dashboard = function () {
     // ------------------------------------------------------------------------
 
     var load_todo = function () {
-        $.get('api/create_todo', function (o) {
+        $.get('api/get_todo', function (o) {
+
             var output = '';
             for (var i = 0; i < o.length; i++) {
                 output += Template.todo(o[i]);
             }
             $('#list_todo').html(output);
         }, 'json');
+
     };
 
     // ------------------------------------------------------------------------
