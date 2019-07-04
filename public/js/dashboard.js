@@ -22,6 +22,7 @@ var Dashboard = function () {
             }
             $('#list_todo').html(output);
             Evento.delete_todo();
+            Evento.update_todo();
         }, 'json');
 
     };

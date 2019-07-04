@@ -13,6 +13,10 @@
     min-height: 500px;
 }
 
+.todo-completed {
+    color: #009900;
+}
+
 /** Generic Staff */
 .hide {
     display: none;

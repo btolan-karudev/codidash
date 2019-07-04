@@ -10,7 +10,7 @@ var Evento = function () {
         create_todo();
 
         update_note();
-        update_todo();
+        // update_todo();
 
         delete_note();
         // delete_todo();
@@ -51,8 +51,36 @@ var Evento = function () {
 
     // ------------------------------------------------------------------------
 
-    var update_todo = function () {
+    this.update_todo = function () {
+        $(".todo_update").on('click', function (e) {
+            e.preventDefault();
 
+            var self = $(this);
+            var url = $(this).attr('href');
+            var postData = {
+                todo_id: $(this).attr('data-id'),
+                completed: $(this).attr('data-completed')
+            };
+
+            $.post(url, postData, function (o) {
+                if (o.result == 1) {
+                    Result.success('Saved');
+                    if (postData.completed == 1) {
+                        self.parent('div').addClass('todo-completed');
+                        self.html('Uncomplete');
+                        self.attr('data-completed', 0)
+                    } else {
+                        self.parent('div').removeClass('todo-completed');
+                        self.html('Complete');
+                        self.attr('data-completed', 1)
+                    }
+
+                } else {
+                    Result.error('Nothing Updated');
+                }
+            }, 'json');
+
+        })
     };
 
     // ------------------------------------------------------------------------
