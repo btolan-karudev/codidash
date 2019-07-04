@@ -104,6 +104,7 @@ class Api extends CI_Controller
 
         $this->output->set_output(json_encode($result));
     }
+
     //------------------------------------------------------------------------------------------------------------------
     public function create_todo()
     {
@@ -150,7 +151,20 @@ class Api extends CI_Controller
     public function delete_todo()
     {
         $this->_require_login();
-        $todo_id = $this->input->post('todo_id');
+
+        $result = $this->db->delete('todo', [
+            'todo_id' => $this->input->post('todo_id'),
+            'user_id' => $this->session->userdata('user_id')
+        ]);
+
+        if ($result) {
+            $this->output->set_output(json_encode(['result' => 1]));
+            return false;
+        }
+        $this->output->set_output(json_encode([
+            'result' => 0,
+            'message' => 'Could not delete'
+        ]));
     }
 
     //------------------------------------------------------------------------------------------------------------------
@@ -160,6 +174,7 @@ class Api extends CI_Controller
 
 
     }
+
     //------------------------------------------------------------------------------------------------------------------
     public function create_note()
     {

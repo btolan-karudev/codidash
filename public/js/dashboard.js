@@ -21,6 +21,7 @@ var Dashboard = function () {
                 output += Template.todo(o[i]);
             }
             $('#list_todo').html(output);
+            Evento.delete_todo();
         }, 'json');
 
     };

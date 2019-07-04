@@ -5,6 +5,7 @@ var Evento = function () {
     this.__construct = function () {
         console.log('Event created');
         Result = new Result();
+
         create_note();
         create_todo();
 
@@ -12,8 +13,7 @@ var Evento = function () {
         update_todo();
 
         delete_note();
-        delete_todo();
-
+        // delete_todo();
 
     };
 
@@ -51,25 +51,42 @@ var Evento = function () {
 
     // ------------------------------------------------------------------------
 
-    var update_todo = function() {
+    var update_todo = function () {
 
     };
 
     // ------------------------------------------------------------------------
 
-    var update_note = function() {
+    var update_note = function () {
 
     };
 
     // ------------------------------------------------------------------------
 
-    var delete_todo = function() {
+    this.delete_todo = function () {
 
+        $(".todo_delete").on('click', function (e) {
+            e.preventDefault();
+            console.log('je suis la');
+            var self = $(this).parent('div');
+            var url = $(this).attr('href');
+            var postData = {
+                'todo_id': $(this).attr('data-id')
+            };
+            $.post(url, postData, function (o) {
+                if (o.result == 1) {
+                    Result.success('Item Deleted');
+                    self.remove();
+                } else {
+                    Result.error(o.message);
+                }
+            }, 'json');
+        });
     };
 
     // ------------------------------------------------------------------------
 
-    var delete_note = function() {
+    var delete_note = function () {
 
     };
 
