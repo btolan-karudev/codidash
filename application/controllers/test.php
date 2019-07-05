@@ -12,6 +12,14 @@ class Test extends CI_Controller
 //            'login' => 'Markus2'
 //        ));
 //        $result = $this->user_model->insert(['login'=> 'Markus2']);
+//        $result = $this->user_model->update(
+//            array('password' => 'dog', 'login' => 'hen'),
+//            array('login' => 'Markus3')
+//        );
+        $result = $this->user_model->insertUpdate([
+            'login' => 'Doggy5'
+        ], 25);
+
 
         echo '<pre>';
         print_r($result);

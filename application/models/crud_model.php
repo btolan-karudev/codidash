@@ -57,15 +57,49 @@ class CRUD_Model extends CI_Model
 
     /**
      * @usage $this->user_model->update($data, 7);
+     *        $this->user_model->update(['login' => 'Ted'], ['date_created' => '0']);
      */
-    public function update($data, $user_id)
+    public function update($new_data, $where)
     {
-        $this->db
-            ->where(['user_id' => $user_id])
-            ->update('user', $data);
+        if (is_numeric($where)) {
+            $this->db->where($this->_primary_key, $where);
+        } elseif (is_array($where)) {
+            foreach ($where as $_key => $_value) {
+                $this->db->where($_key, $_value);
+            }
+        } else {
+            die("You must pass a second parameter to the update() method");
+        }
+
+        $this->db->update($this->_table, $new_data);
 
         return $this->db->affected_rows();
     }
+    //------------------------------------------------------------------------------------------------------------------
+
+    /**
+     * @usage insertUpdate(['name' => 'ted'], 12)
+     */
+    public function insertUpdate($data, $id = false)
+    {
+        if (!$id) {
+            die("You must pass a second parameter to the insertUpdate() method");
+        }
+        $this->db->select($this->_primary_key);
+        $this->db->where($this->_primary_key, $id);
+        $q = $this->db->get($this->_table);
+        $result = $q->num_rows();
+
+        if ($result == 0) {
+            //update
+            return $this->insert($data);
+        }
+        //insert
+        return $this->update($data, $id);
+
+        return $result;
+    }
+
     //------------------------------------------------------------------------------------------------------------------
 
     /**
