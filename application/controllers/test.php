@@ -7,9 +7,12 @@ class Test extends CI_Controller
     {
         parent::__construct();
         $this->load->model('user_model');
-        $result = $this->user_model->get(array(
-            'login !=' => "Jenkins"
-        ));
+        $result = $this->user_model->get();
+//        $result = $this->user_model->delete(array(
+//            'login' => 'Markus2'
+//        ));
+//        $result = $this->user_model->insert(['login'=> 'Markus2']);
+
         echo '<pre>';
         print_r($result);
 
