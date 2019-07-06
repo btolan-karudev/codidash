@@ -211,6 +211,37 @@ class Api extends CI_Controller
     {
         $this->_require_login();
 
+        $this->form_validation->set_rules('title', 'title', 'required|max_length[50]');
+        $this->form_validation->set_rules('content', 'content', 'required|max_length[500]');
+        if ($this->form_validation->run() == false) {
+            $this->output->set_output(json_encode([
+                'result' => 0,
+                'error' => $this->form_validation->error_array()
+            ]));
+
+            return false;
+        }
+
+        $result = $this->note_model->insert([
+            'title' => $this->input->post('title'),
+            'content' => $this->input->post('content'),
+            'user_id' => $this->session->userdata('user_id')
+        ]);
+
+        if ($result) {
+            //get the freshest entry from the dom
+
+            $this->output->set_output(json_encode([
+                'result' => 1,
+                'data' => $result
+            ]));
+            return false;
+        }
+        $this->output->set_output(json_encode([
+            'result' => 0,
+            'error' => 'Could not insert record'
+        ]));
+
 
     }
 

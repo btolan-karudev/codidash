@@ -36,6 +36,7 @@ var Dashboard = function () {
                 output += Template.note(o[i]);
             }
             $('#list_note').html(output);
+            Evento.create_note();
         }, 'json');
     };
 

@@ -6,7 +6,7 @@ var Evento = function () {
         console.log('Event created');
         Result = new Result();
 
-        create_note();
+        // create_note();
         create_todo();
 
         update_note();
@@ -41,12 +41,24 @@ var Evento = function () {
 
     // ------------------------------------------------------------------------
 
-    var create_note = function () {
+    this.create_note = function () {
         $('#create_note').submit(function (evt) {
-            console.log('created note cliked');
+            evt.preventDefault();
+            console.log('created todo cliked');
 
-            return false;
-        })
+            var url = $(this).attr('action');
+            var postData = $(this).serialize();
+
+            $.post(url, postData, function (o) {
+                if (o.result == 1) {
+                    Result.success('test succes');
+                    var output = Template.note(o.data[0]);
+                    $('#list_note').append(output);
+                } else {
+                    Result.error(o.error);
+                }
+            }, 'json');
+        });
     };
 
     // ------------------------------------------------------------------------
