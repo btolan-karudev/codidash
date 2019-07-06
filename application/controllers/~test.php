@@ -18,7 +18,7 @@ class Test extends CI_Controller
 //        );
         $result = $this->user_model->insertUpdate([
             'login' => 'Doggy5'
-        ], 25);
+        ], 55);
 
 
         echo '<pre>';
