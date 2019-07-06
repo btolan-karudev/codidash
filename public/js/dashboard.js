@@ -30,7 +30,7 @@ var Dashboard = function () {
     // ------------------------------------------------------------------------
 
     var load_note = function () {
-        $.get('api/create_note', function (o) {
+        $.get('api/get_note', function (o) {
             var output = '';
             for (var i = 0; i < o.length; i++) {
                 output += Template.note(o[i]);

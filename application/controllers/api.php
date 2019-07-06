@@ -184,10 +184,25 @@ class Api extends CI_Controller
     }
 
     //------------------------------------------------------------------------------------------------------------------
-    public function get_note()
+    public function get_note($id = null)
     {
         $this->_require_login();
 
+        if ($id != null) {
+
+            $result = $this->note_model->get([
+                'note_id' => $id,
+                'user_id' => $this->session->userdata('user_id')
+            ]);
+        } else {
+            $result = $this->note_model->get([
+                'user_id' => $this->session->userdata('user_id')
+            ]);
+
+        }
+
+
+        $this->output->set_output(json_encode($result));
 
     }
 
